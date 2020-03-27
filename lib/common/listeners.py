@@ -547,7 +547,8 @@ class Listeners(object):
         inactive_listeners = {}
         for listener in filter((lambda x: x['name'] not in list(self.activeListeners.keys())), db_listeners):
             inactive_listeners[listener['name']] = {'moduleName': listener['module'],
-                                                    'options': pickle.loads(listener['options'])}
+                                                    'options': pickle.loads(listener['options'].encode('utf-8'))}
+
 
         cur.close()
         self.conn.row_factory = oldFactory

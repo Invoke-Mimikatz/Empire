@@ -18,3 +18,4 @@ setup/bomutils/
 venv/
 addons/
 .gitignore
+lib/common/messages.py

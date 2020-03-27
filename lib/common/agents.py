@@ -250,6 +250,10 @@ class Agents(object):
         lang = self.get_language_db(sessionID)
         parts = path.split("\\")
         parts
+        try:
+            print("data len is: " + str(len(data)))
+        except:
+            print("error with print statement?")
 
         # construct the appropriate save path
         save_path = "%sdownloads/%s/%s" % (self.installPath, sessionID, "/".join(parts[0:-1]))

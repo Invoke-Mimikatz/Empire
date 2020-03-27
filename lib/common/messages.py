@@ -89,7 +89,6 @@ def loading():
                         ``.----.`
 
                 Welcome to the Empire""")
-    time.sleep(3)
     os.system('clear')
 
 
