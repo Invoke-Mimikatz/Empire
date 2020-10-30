@@ -1,5 +1,21 @@
-# Modified version of Invoke-Assembly
 Function Invoke-Assembly {
+<#
+    .SYNOPSIS
+
+        Loads the compiled .NET code stored in the $asm_data variable and executes the
+        Main() method. Arguments can be passed to the loaded assembly.
+        Powershell port of https://gitlab.com/KevinJClark/csharper
+
+    .EXAMPLE
+
+        This script is not meant to be run outside of Empire. Instead, use
+        the standalone version found here:
+        https://gitlab.com/KevinJClark/csharptoolbox/-/blob/master/Invoke-Assembly.ps1
+
+    .LINK
+
+        https://www.mike-gualtieri.com/posts/red-team-tradecraft-loading-encrypted-c-sharp-assemblies-in-memory
+#>
 	[CmdletBinding()]
 		Param (		
 			[Parameter()]

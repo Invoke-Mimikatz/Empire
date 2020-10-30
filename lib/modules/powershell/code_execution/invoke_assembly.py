@@ -49,7 +49,7 @@ class Module(object):
                 'Value': ''
             },
             'Assembly': {
-                'Description': 'Local path to the .NET assembly (.exe)',
+                'Description': 'Local path to the .NET assembly (.exe). Relative and absolute paths supported.',
                 'Required': True,
                 'Value': ''
             },
